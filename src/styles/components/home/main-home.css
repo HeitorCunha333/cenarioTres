@@ -1,0 +1,115 @@
+
+
+.main-home {
+  margin: 0 auto;
+  margin-top: clamp(5rem, 15vh, 10rem);
+  background: var(--grey-4);
+  width: min(412px, 90%);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--grey-3);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--violet-light), transparent);
+  opacity: 0.5;
+}
+
+.main-home__title {
+  font-size: clamp(var(--text-xl), 4vw, var(--text-3xl));
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: var(--grey-1);
+  font-weight: 600;
+}
+
+.main-home__legend{
+  font-size: var(--text-xl);
+  text-align: center;
+}
+
+.main-home__btn {
+  background: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid var(--violet-dark);
+  border-radius: var(--radius-md);
+  color: var(--violet-light);
+  font-size: clamp(3rem, 8vw, 4rem);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(151, 71, 255, 0.2);
+}
+
+.main-home__btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--violet-dark);
+  transform: translate(-50%, -50%);
+  transition: width var(--transition-slow), height var(--transition-slow);
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.main-home__btn:hover {
+  color: var(--violet-light);
+  border-color: var(--violet-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(151, 71, 255, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+.main-home__btn:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+.main-home__btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 15px rgba(151, 71, 255, 0.3);
+}
+
+.main-home__btn:focus-visible {
+  outline: 2px solid var(--violet-light);
+  outline-offset: 4px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(-2px) scale(1);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-home {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .main-home__btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}
+
+
