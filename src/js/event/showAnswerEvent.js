@@ -13,6 +13,14 @@ function showWrong(parentElement, checkboxIcon, answersInputs){
   })
 }
 
+function disableQuestionInputs(questBox) {
+  const inputs = questBox.querySelectorAll("[data-js='checkbox-input']")
+  inputs.forEach(input => {
+    input.disabled = true
+    input.parentElement.classList.add("questions-container--disabled-input")
+  })
+}
+
 function correctAnswersInputs(inputs, answers){
   const answersInputs = []
   inputs.forEach((it) => {
@@ -22,8 +30,8 @@ function correctAnswersInputs(inputs, answers){
   return answersInputs
 }
 
-export function showAnswerEvent(answers) {
-  const checksInputs = document.querySelectorAll("[data-js='checkbox-input']")
+export function showAnswerEvent(questBox ,answers) {
+  const checksInputs = questBox.querySelectorAll("[data-js='checkbox-input']")
   const correctAnswers = correctAnswersInputs(checksInputs, answers)
 
   checksInputs.forEach((it) => {
@@ -32,15 +40,17 @@ export function showAnswerEvent(answers) {
     const checkboxIconWrong = nextElementSibling.children[1]
 
     it.addEventListener("input", (event) => {
-
       const { value } = event.currentTarget
       const isCorrect = answers.includes(value)
-  
+      
       if (isCorrect) {
         showHit(parentElement, checkboxIconHit)
       } else {
         showWrong(parentElement, checkboxIconWrong, correctAnswers)
       }
+        
+      // Desabilita apenas os inputs da questão atual
+      disableQuestionInputs(questBox)
     })
   })
 }

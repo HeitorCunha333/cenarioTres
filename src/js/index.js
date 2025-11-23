@@ -6,7 +6,7 @@ function renderImg(questions) {
   return `
       ${
         questions.imgUrl.length > 0
-          ? `
+          ? `    
       <div class="questions-container__image ">
         <img src="${questions.imgUrl}" alt="Imagem da pergunta atual">
       </div>`
@@ -27,14 +27,15 @@ function renderOptions(options, questionNumber, isCheckBox) {
   options.map((_, idx, arr) => {
     const position = positionsList[idx]
     const item = arr[position]
+    const uniqueId = `question-${questionNumber}-option-${position}`
 
     html += `
     <div class="questions-container__options-box">
     <!-- Pergunta ${idx + 1}-->
-    <label class="questions-container__option" for="${position}">
+    <label class="questions-container__option" for="${uniqueId}">
                 <input type="${
                   isCheckBox ? "checkbox" : "radio"
-                }" id="${position}" data-js="checkbox-input" name="${questionNumber}" value="${item}">
+                }" id="${uniqueId}" data-js="checkbox-input" name="${questionNumber}" value="${item}">
                 ${item}
                 <span class="questions-container__checkbox" >
                 <i class="fa-solid fa-check hidden"></i>
@@ -60,14 +61,41 @@ function renderOptions(options, questionNumber, isCheckBox) {
   const data = await databaseRep.fetchData()
   const questions = await data.getQuestions()
 
-  const isCheckBox = questions[0].answers.length > 1
-  questionContainer.innerHTML += renderImg(questions[0])
-  questionContainer.innerHTML += renderTitle(questions[0])
-  questionContainer.innerHTML += renderOptions(
-    questions[0].options,
-    questions[0].id,
-    isCheckBox
+  questions.forEach((it) => {
+    const questBox = document.createElement("div")
+    questBox.classList.add("questions-container__quest-box")
+    questBox.setAttribute("data-js", "quest-box")
+
+    const isCheckBox = it.answers.length > 1
+    questBox.innerHTML += renderImg(it)
+    questBox.innerHTML += renderTitle(it)
+    questBox.innerHTML += renderOptions(it.options, it.id, isCheckBox)
+
+    questionContainer.appendChild(questBox)
+
+    showAnswerEvent(questBox,it.answers)
+  })
+
+  questionContainer.children[0].classList.add("questions-container--show-quest-box")
+  nextQuestionClick()
+})()
+
+
+function nextQuestionClick (){
+  const btnNext = document.querySelector("[data-js='btn-next-page']")
+  const questBoxList = document.querySelectorAll(
+    "[data-js='quest-box']"
   )
 
-  showAnswerEvent(questions[0].answers)
-})()
+  btnNext.addEventListener("click", () => {
+    let index = 0
+    questBoxList.forEach( (it, idx) => {
+      if(it.classList.contains("questions-container--show-quest-box")){
+        it.classList.remove("questions-container--show-quest-box")
+        index = idx
+        return
+      }
+    })
+    questBoxList.item(index + 1).classList.add("questions-container--show-quest-box")
+  })
+}
