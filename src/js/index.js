@@ -1,6 +1,8 @@
 import { Database } from "./repository/Database.js"
 import { getValidPosition } from "./utils/randomOptions.js"
 import { showAnswerEvent } from "./event/showAnswerEvent.js"
+import { nextQuestionEvent } from "./event/nextQuestionEvent.js"
+import { currentPageEvent } from "./event/currentPageEvent.js"
 
 function renderImg(questions) {
   return `
@@ -77,25 +79,8 @@ function renderOptions(options, questionNumber, isCheckBox) {
   })
 
   questionContainer.children[0].classList.add("questions-container--show-quest-box")
-  nextQuestionClick()
+  nextQuestionEvent()
+  currentPageEvent().findCurrentIndex()
+  currentPageEvent().refresh()
 })()
 
-
-function nextQuestionClick (){
-  const btnNext = document.querySelector("[data-js='btn-next-page']")
-  const questBoxList = document.querySelectorAll(
-    "[data-js='quest-box']"
-  )
-
-  btnNext.addEventListener("click", () => {
-    let index = 0
-    questBoxList.forEach( (it, idx) => {
-      if(it.classList.contains("questions-container--show-quest-box")){
-        it.classList.remove("questions-container--show-quest-box")
-        index = idx
-        return
-      }
-    })
-    questBoxList.item(index + 1).classList.add("questions-container--show-quest-box")
-  })
-}

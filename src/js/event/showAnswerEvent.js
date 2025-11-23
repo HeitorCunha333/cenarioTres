@@ -32,6 +32,7 @@ function correctAnswersInputs(inputs, answers){
 
 export function showAnswerEvent(questBox ,answers) {
   const checksInputs = questBox.querySelectorAll("[data-js='checkbox-input']")
+  const viewHits = document.querySelector("[data-js='view-hits']")
   const correctAnswers = correctAnswersInputs(checksInputs, answers)
 
   checksInputs.forEach((it) => {
@@ -44,6 +45,7 @@ export function showAnswerEvent(questBox ,answers) {
       const isCorrect = answers.includes(value)
       
       if (isCorrect) {
+        viewHits.innerText = Number(viewHits.textContent) + 1
         showHit(parentElement, checkboxIconHit)
       } else {
         showWrong(parentElement, checkboxIconWrong, correctAnswers)
