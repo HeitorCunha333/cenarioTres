@@ -1,0 +1,16 @@
+.header__hits{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+  background-color: var(--grey-4);
+  border: 2px solid var(--green-light);
+  border-radius: 8px;
+  color: var(--green-light);
+  padding: 1rem;
+}
+
+.header__hits > *{
+  font-size: var(--text-xl);
+  font-weight: 900;
+}
