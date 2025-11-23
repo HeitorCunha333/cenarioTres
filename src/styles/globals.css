@@ -1,0 +1,63 @@
+:root {
+  /* Colors */
+  --grey-1: #d9d9d9;
+  --grey-2: #565e6d;
+  --grey-3: #252c3a;
+  --grey-4: #1d2330;
+  --grey-5: #181d28;
+  --grey-6: #161a24;
+
+  --green-light: #abf770;
+  --green-dark: #5cad1d;
+
+  --red-light: #f77070;
+  --red-dark: #ab3030;
+
+  --violet-light: #9747ff;
+  --violet-dark: #8128f5;
+
+  /* Font size */
+  --text-xs: 0.75rem;
+  --text-base: 1rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+body {
+  color: var(--grey-1);
+  background: var(--grey-6);
+  min-height: 100vh;
+}
+
+strong {
+  font-weight: 800;
+}

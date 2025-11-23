@@ -1,0 +1,10 @@
+
+/* Reset styles CSS */
+@import "reset.css";
+
+/* Globals CSS Config */
+@import "globals.css";
+
+
+@import "components/home/header-home.css";
+@import "components/home/main-home.css"
