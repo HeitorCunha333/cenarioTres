@@ -17,6 +17,15 @@
   width: 100%;
 }
 
+.questions-container__image {
+   padding: 3rem 7rem;
+   border: 3px solid var(--grey-3);
+   border-radius: 0.8rem;
+}
+
+.questions-container__image img {
+  border-radius: 8px;
+}
 
 .questions-container__title{
   font-size: var(--text-2xl);
