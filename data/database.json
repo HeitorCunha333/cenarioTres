@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": 1,
-      "imgUrl": "./img-question/img-q1.png",
+      "imgUrl": "",
       "question": "O que é um conjunto em matemática?",
       "type": "conjuntos - definição",
       "options": [
