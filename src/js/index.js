@@ -1,4 +1,6 @@
 import { Database } from "./repository/Database.js"
+import { getValidPosition } from "./utils/randomOptions.js"
+import { showAnswerEvent } from "./event/showAnswerEvent.js"
 
 function renderImg(questions) {
   return `
@@ -19,38 +21,30 @@ function renderTitle(questions) {
 
 function renderOptions(options, questionNumber, isCheckBox) {
   let html = ""
+  const length = options.length
+  const positionsList = getValidPosition(length)
 
-  options.map((it, idx) => {
+  options.map((_, idx, arr) => {
+    const position = positionsList[idx]
+    const item = arr[position]
+
     html += `
-            <div class="questions-container__options-box">
-              <!-- Pergunta ${idx + 1}-->
-              <label class="questions-container__option" for="${idx}">
-                <input type="${isCheckBox ? "checkbox" : "radio"}" id="${idx}" data-js="checkbox-input" name="${questionNumber}" value="${it}">
-                ${it}
-                <span class="questions-container__checkbox" data-js="checkbox">
+    <div class="questions-container__options-box">
+    <!-- Pergunta ${idx + 1}-->
+    <label class="questions-container__option" for="${position}">
+                <input type="${
+                  isCheckBox ? "checkbox" : "radio"
+                }" id="${position}" data-js="checkbox-input" name="${questionNumber}" value="${item}">
+                ${item}
+                <span class="questions-container__checkbox" >
+                <i class="fa-solid fa-check hidden"></i>
+                <i class="fa-solid fa-x hidden"></i>
                 </span>
-              </label>
-            </div>`
+                </label>
+                </div>`
   })
 
   return html
-}
-
-
-function callEventClick(answers){
-  const checksInputs = document.querySelectorAll("[data-js='checkbox-input']")
-  checksInputs.forEach( it => {
-    it.addEventListener("input", (it) => {
-      const { value, checked } = it.currentTarget
-  
-      
-
-      console.log(value, checked)
-    })
-    
-  })
-
-
 }
 
 ;(async () => {
@@ -67,11 +61,13 @@ function callEventClick(answers){
   const questions = await data.getQuestions()
 
   const isCheckBox = questions[0].answers.length > 1
-
   questionContainer.innerHTML += renderImg(questions[0])
   questionContainer.innerHTML += renderTitle(questions[0])
-  questionContainer.innerHTML += renderOptions(questions[0].options, questions[0].id, isCheckBox)
+  questionContainer.innerHTML += renderOptions(
+    questions[0].options,
+    questions[0].id,
+    isCheckBox
+  )
 
-
-  callEventClick(questions[0].answers)
+  showAnswerEvent(questions[0].answers)
 })()
