@@ -5,6 +5,19 @@
 /* Globals CSS Config */
 @import "globals.css";
 
+/* Util - Header */
+@import "components/header.css";
 
-@import "components/home/header-home.css";
-@import "components/home/main-home.css"
+/* Home */
+@import "components/home/main-home.css";
+
+/* Quiz */
+/* -- Header */
+@import "components/quiz/header-hits.css";
+/* -- ContainerQuiz */
+@import "components/quiz/container-quiz.css";
+/* -- Footer */
+@import "components/quiz/footer-quiz.css";
+
+/* -- Box-Questions */
+@import "components/quiz/box-questions.css"

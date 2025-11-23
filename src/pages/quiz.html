@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuizMath - Atividade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/index.css">
 </head>
+
 <body>
-    
+
+  <header>
+    <div class="header header--to-separate">
+      <h1 class="header__title"><strong>Quiz</strong>Math &#128075</h1>
+
+      <div class="header__hits">
+        <i class="fa-solid fa-check"></i>
+        <span data-js="view-hits">10</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="questions">
+    <div class="questions-container">
+
+      <div class="questions-container__image">
+        <img src="" alt="Imagem da pergunta atual">
+      </div>
+      <!-- Title -->
+      <div class="questions-container__title" data-js="title-question">O que é um conjunto em matématica?</div>
+
+      <!-- Container Quiz -->
+      <div class="questions-container__options-box">
+        <!-- Pergunta 1 -->
+        <label class="questions-container__option questions-container--wrong" for="0">
+          <input type="checkbox" id="0" name="1" value="Agrupamento de elementos que possuem uma característica em comum">
+          Agrupamento de elementos que possuem uma característica em comum
+          <span class="questions-container__checkbox" data-js="checkbox">
+            <i class="fa-solid fa-x"></i>
+          </span>
+        </label>
+
+        <!-- Pergunta 2 -->
+        <label class="questions-container__option" for="1">
+          <input type="checkbox" id="1" name="1" value="Uma lista ordenada de números">
+          Uma lista ordenada de números
+          <span class="questions-container__checkbox" data-js="checkbox"></span>
+        </label>
+
+
+        <!-- Pergunta 3 -->
+        <label class="questions-container__option questions-container--hit" for="2">
+          <input type="checkbox" id="2" name="1" value="Um gráfico que representa dados">
+          Um gráfico que representa dados
+          <span class="questions-container__checkbox" data-js="checkbox">
+            <i class="fa-solid fa-check"></i>
+          </span>
+        </label>
+        <!-- Pergunta 4 -->
+        <label class="questions-container__option" for="3">
+          <input type="checkbox" id="3" name="1" value="Uma operação matemática entre elementos">
+          Uma operação matemática entre elementos
+          <span class="questions-container__checkbox" data-js="checkbox"></span>
+        </label>
+      </div>
+
+
+      <!-- Footer -->
+      <div class="questions-container__footer">
+        <div class="questions-container__page">
+          <span class="questions-container__current-page" data-js="current-page">4</span>
+          /
+          <span data-js="last-page">5</span>
+        </div>
+
+        <button class="questions-container__btn-next" data-js="btn-next-page"> <i class="fa-solid fa-angle-right"></i></button>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <script src="https://kit.fontawesome.com/7e1d3b5b7e.js" crossorigin="anonymous"></script>
+  <script type="module" src="/src/js/index.js"></script>
 </body>
+
 </html>

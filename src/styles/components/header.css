@@ -1,20 +1,26 @@
 
 
-
-.header-home {
+.header {
   text-align: center;
   padding: var(--spacing-md) var(--spacing-sm);
   background: var(--grey-5);
 }
 
-.header-home__title {
+.header--to-separate{
+  display: flex;
+  padding-inline: 1.5rem; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
   font-weight: 400;
   font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
   letter-spacing: -0.02em;
   transition: color var(--transition-base);
 }
 
-.header-home__title strong {
+.header__title strong {
   color: var(--violet-light);
   text-shadow: 0 0 20px rgba(151, 71, 255, 0.3);
 }
