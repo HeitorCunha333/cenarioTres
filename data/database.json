@@ -19,7 +19,7 @@
     },
     {
       "id": 2,
-      "imgUrl": "./img-question/img-q2.png",
+      "imgUrl": "",
       "question": "Julgue a sentença: Dois conjuntos são iguais se possuem os mesmos elementos",
       "type": "conjuntos - definição",
       "options": [
@@ -32,22 +32,20 @@
     },
     {
       "id": 3,
-      "imgUrl": "./img-question/img-q3.png",
-      "question": "Sobre a notação de conjuntos, qual afirmação é CORRETA?",
+      "imgUrl": "",
+      "question": "Julgue esta sentença: A ordem e a repetição dos elementos dentro de um conjunto é irrelevante",
       "type": "conjuntos - definição",
       "options": [
-        "{1, 2, 3} e {3, 2, 1} são conjuntos diferentes",
-        "{a, a, b} possui três elementos",
-        "∅ é o mesmo que {0}",
-        "Um conjunto pode ser definido por compreensão ou por extensão"
+        "Verdadeiro",
+        "Falso"
       ],
-      "answers": ["Um conjunto pode ser definido por compreensão ou por extensão"],
-      "explanation": "Conjuntos podem ser definidos listando seus elementos (extensão) ou especificando uma propriedade que os elementos devem satisfazer (compreensão).",
+      "answers": ["Verdadeiro"],
+      "explanation": "Um conjunto é caracterizado pela presença dos elementos, não pela ordem ou multiplicidade dos mesmos.",
       "difficulty": "dificil"
     },
     {
       "id": 4,
-      "imgUrl": "./img-question/img-q4.png",
+      "imgUrl": "",
       "question": "Dados A = {1, 2, 3, 4, 5} e B = {3, 4, 5, 6, 7, 8}, qual é A ∪ B?",
       "type": "conjuntos - união",
       "options": [
@@ -62,7 +60,7 @@
     },
     {
       "id": 5,
-      "imgUrl": "./img-question/img-q5.png",
+      "imgUrl": "",
       "question": "Se A = {x | x é par e 0 < x < 10} e B = {x | x é múltiplo de 3 e 0 < x < 10}, quantos elementos tem A ∪ B?",
       "type": "conjuntos - união",
       "options": [
@@ -77,67 +75,65 @@
     },
     {
       "id": 6,
-      "imgUrl": "./img-question/img-q6.png",
-      "question": "Dados três conjuntos A, B e C, qual propriedade é válida?",
+      "imgUrl": "",
+      "question": "Considere esses conjuntos: U = {a, b, c, d, e, f, g, h, i, j, k}, A = {a, b, c, e, f} e B = {e, f, i, j, k}. Se o conjunto C = A ∪ B, marque a alternativa que representa corretamente o conjunto C:",
       "type": "conjuntos - união",
       "options": [
-        "A ∪ (B ∪ C) = (A ∪ B) ∪ C (associativa)",
-        "A ∪ B sempre tem mais elementos que A",
-        "A ∪ ∅ = ∅",
-        "Se A ∪ B = A, então B = ∅"
+        "C = {e, f} ",
+        "C = {a, b, c, i, j, k}",
+        "C = {a, b, c, d, e, f, g, h, i, j, k}",
+        "C = {a, b, c, e, f, i, j, k}"
       ],
-      "answers": ["A ∪ (B ∪ C) = (A ∪ B) ∪ C (associativa)"],
-      "explanation": "A união é uma operação associativa, permitindo agrupar conjuntos de diferentes formas sem alterar o resultado.",
-      "difficulty": "dificil"
+      "answers": ["C = {a, b, c, e, f, i, j, k}"],
+      "explanation": "A união contém todos os elementos de ambos os conjuntos A e B. Os elementos que estão fora esses conjuntos, mesmo estando no conjunto U (universo) não fazem parte dessa união.",
+      "difficulty": "medio"
     },
     {
       "id": 7,
-      "imgUrl": "./img-question/img-q7.png",
-      "question": "Dados A = {1, 2, 3, 4} e B = {3, 4, 5}, qual é A ∩ B?",
+      "imgUrl": "",
+      "question": "Dados A = {1, 2, 3, 4, 5, 6, 7} e B = {3, 4, 5}, qual é A ∩ B?",
       "type": "conjuntos - interseção",
       "options": [
-        "{3, 4}",
+        "{3, 4, 5}",
         "{1, 2, 3, 4, 5}",
         "{1, 2, 5}",
         "{}"
       ],
-      "answers": ["{3, 4}"],
+      "answers": ["{3, 4, 5}"],
       "explanation": "A interseção A ∩ B contém apenas os elementos que pertencem simultaneamente a A e a B.",
       "difficulty": "facil"
     },
     {
       "id": 8,
-      "imgUrl": "./img-question/img-q8.png",
-      "question": "Se |A| = 8, |B| = 6 e |A ∪ B| = 11, qual é |A ∩ B|?",
+      "imgUrl": "",
+      "question": "(A ∪ B) = A + B + (A ∩ B). Julgue essa setença:",
       "type": ["conjuntos - interseção", "conjuntos - união"],
       "options": [
-        "3",
-        "2",
-        "4",
-        "5"
+        "Verdadeiro",
+        "Falso"
       ],
-      "answers": ["3"],
-      "explanation": "Pela fórmula |A ∪ B| = |A| + |B| - |A ∩ B|, temos: 11 = 8 + 6 - |A ∩ B|, logo |A ∩ B| = 3.",
+      "answers": ["Falso"],
+      "explanation": "A união equivale a diferença da soma dos conjuntos desta união e da interseção dos mesmos. (A ∪ B) = A + B - (A ∩ B).",
       "difficulty": "medio"
     },
     {
       "id": 9,
-      "imgUrl": "./img-question/img-q9.png",
+      "imgUrl": "",
       "question": "Qual das seguintes propriedades é válida para a interseção de conjuntos?",
       "type": "conjuntos - interseção",
       "options": [
-        "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) (distributiva)",
+        "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)",
         "A ∩ B sempre é igual a A",
         "A ∩ ∅ = A",
         "Se A ∩ B = ∅, então A = ∅ ou B = ∅"
       ],
-      "answers": ["A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) (distributiva)"],
-      "explanation": "A interseção é distributiva em relação à união, permitindo 'distribuir' a operação de interseção.",
+      "answers": ["A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)"],
+      "explanation": "A interseção posssui uma propriedade distributiva em relação à união, permitindo 'distribuir' a operação de interseção.",
       "difficulty": "dificil"
     },
     {
       "id": 10,
-      "imgUrl": "./img-question/img-q10.png",
+      "imgUrl": "",
       "question": "Se U = {1, 2, 3, 4, 5} é o universo e A = {1, 2, 3}, qual é A' (complemento de A)?",
       "type": "conjuntos - complemento",
       "options": [
@@ -152,22 +148,22 @@
     },
     {
       "id": 11,
-      "imgUrl": "./img-question/img-q11.png",
-      "question": "Dado U = {a, b, c, d, e, f}, A = {a, b, c} e B = {b, c, d}, calcule (A ∪ B)':",
+      "imgUrl": "",
+      "question": "Dado U = {a, b, c, d, e, f}, A = {a, c, d} e B = {b, c, e}, calcule o complemento de (A ∪ B):",
       "type": ["conjuntos - complemento", "conjuntos - união"],
       "options": [
-        "{e, f}",
-        "{a, d}",
+        "{c}",
+        "{f}",
         "{b, c}",
-        "{a, b, c, d}"
+        "{a, b, c, d, e}"
       ],
-      "answers": ["{e, f}"],
-      "explanation": "Primeiro: A ∪ B = {a, b, c, d}. Depois: (A ∪ B)' = {e, f} (elementos de U não em A ∪ B).",
+      "answers": ["{f}"],
+      "explanation": "Primeiro: A ∪ B = {a, b, c, d, e}. Em seguida, o complemento de (A ∪ B) = {f}, que são elementos de U não em A ∪ B.",
       "difficulty": "medio"
     },
     {
       "id": 12,
-      "imgUrl": "./img-question/img-q12.png",
+      "imgUrl": "",
       "question": "Qual das Leis de De Morgan está CORRETA?",
       "type": "conjuntos - complemento",
       "options": [
@@ -182,13 +178,13 @@
     },
     {
       "id": 13,
-      "imgUrl": "./img-question/img-q13.png",
+      "imgUrl": "",
       "question": "Qual afirmação sobre subconjuntos é VERDADEIRA?",
       "type": "conjuntos - subconjuntos",
       "options": [
-        "Se todos os elementos de A pertencem a B, então A ⊆ B",
-        "Se A ⊆ B, então A e B têm o mesmo número de elementos",
         "O conjunto vazio não é subconjunto de nenhum conjunto",
+        "Se A ⊆ B, então A e B têm o mesmo número de elementos",
+        "Se todos os elementos de A pertencem a B, então A ⊆ B",
         "Todo conjunto tem apenas um subconjunto"
       ],
       "answers": ["Se todos os elementos de A pertencem a B, então A ⊆ B"],
@@ -197,42 +193,42 @@
     },
     {
       "id": 14,
-      "imgUrl": "./img-question/img-q14.png",
-      "question": "Se A = {1, 2}, quantos subconjuntos A possui (incluindo o próprio A e o conjunto vazio)?",
+      "imgUrl": "",
+      "question": "Se A = {a, b, c, d}, quantos subconjuntos A possui?",
       "type": "conjuntos - subconjuntos",
       "options": [
         "4",
-        "2",
-        "3",
-        "5"
+        "8",
+        "16",
+        "32"
       ],
-      "answers": ["4"],
-      "explanation": "Os subconjuntos são: ∅, {1}, {2}, {1, 2}. A fórmula é 2^n, onde n é o número de elementos: 2^2 = 4.",
+      "answers": ["16"],
+      "explanation": "A fórmula para calcular o número de subconjuntos de um conjunto é 2 elevado a n (2^n), onde n é o número de elementos: 2^4 = 16.",
       "difficulty": "medio"
     },
     {
       "id": 15,
-      "imgUrl": "./img-question/img-q15.png",
+      "imgUrl": "",
       "question": "Se A ⊆ B e B ⊆ C, qual conclusão é VÁLIDA?",
       "type": "conjuntos - subconjuntos",
       "options": [
-        "A ⊆ C (transitividade)",
-        "C ⊆ A",
         "A = C",
+        "C ⊆ A",
+        "A ⊆ C",
         "A ∩ C = ∅"
       ],
-      "answers": ["A ⊆ C (transitividade)"],
-      "explanation": "A relação de subconjunto é transitiva: se A está contido em B e B está contido em C, então A está contido em C.",
+      "answers": ["A ⊆ C"],
+      "explanation": "Se A está contido em B e B está contido em C, então A está contido em C.",
       "difficulty": "dificil"
     },
     {
       "id": 16,
-      "imgUrl": "./img-question/img-q16.png",
+      "imgUrl": "",
       "question": "Uma relação R em um conjunto A é reflexiva quando:",
       "type": "relações - reflexiva",
       "options": [
-        "Para todo elemento a em A, o par (a, a) pertence a R",
         "Se (a, b) está em R, então (b, a) também está",
+        "Para todo elemento a em A, o par (a, a) pertence a R",
         "Se (a, b) e (b, c) estão em R, então (a, c) está",
         "Todo elemento se relaciona com todos os outros"
       ],
@@ -242,8 +238,8 @@
     },
     {
       "id": 17,
-      "imgUrl": "./img-question/img-q17.png",
-      "question": "Seja R = {(1,1), (2,3), (3,3)} uma relação no conjunto A = {1, 2, 3}. R é reflexiva?",
+      "imgUrl": "",
+      "question": "Seja R = {(1,1), (2,3), (3,3), (4,1), (4,3), (4,4)} uma relação no conjunto A = {1, 2, 3, 4}. R é reflexiva?",
       "type": "relações - reflexiva",
       "options": [
         "Não, pois falta o par (2, 2)",
@@ -257,22 +253,22 @@
     },
     {
       "id": 18,
-      "imgUrl": "./img-question/img-q18.png",
-      "question": "Qual das seguintes relações NO conjunto dos números reais é reflexiva?",
+      "imgUrl": "./img-question/img-q18.svg",
+      "question": "Dada a relação representada como matriz acima, ela é considerada reflexiva?",
       "type": "relações - reflexiva",
       "options": [
-        "R = {(x, y) | x ≤ y}",
-        "R = {(x, y) | x < y}",
-        "R = {(x, y) | x ≠ y}",
-        "R = {(x, y) | x > y}"
+        "Não, pois todos os elementos da diagonal principal são iguais a 1",
+        "Sim, pois pelo menos um elemento da diagonal principal é igual a 1",
+        "Sim, pois todos os elementos da diagonal principal são iguais a 1",
+        "Não, porque nem todos os elementos dessa matriz é igual a 1"
       ],
-      "answers": ["R = {(x, y) | x ≤ y}"],
-      "explanation": "A relação ≤ é reflexiva porque x ≤ x para todo x. As outras relações não incluem pares (x, x).",
-      "difficulty": "dificil"
+      "answers": ["Sim, pois todos os elementos da diagonal principal são iguais a 1"],
+      "explanation": "Para uma relação ser reflexiva, todos os elementos da diagonal principal da matriz precisam ser iguais a 1",
+      "difficulty": "medio"
     },
     {
       "id": 19,
-      "imgUrl": "./img-question/img-q19.png",
+      "imgUrl": "",
       "question": "Uma relação R é simétrica quando:",
       "type": "relações - simétrica",
       "options": [
@@ -287,7 +283,7 @@
     },
     {
       "id": 20,
-      "imgUrl": "./img-question/img-q20.png",
+      "imgUrl": "",
       "question": "Seja R = {(1,2), (2,1), (3,3)} no conjunto {1, 2, 3}. R é simétrica?",
       "type": "relações - simétrica",
       "options": [
@@ -302,22 +298,22 @@
     },
     {
       "id": 21,
-      "imgUrl": "./img-question/img-q21.png",
-      "question": "A relação 'ser irmão de' entre pessoas é simétrica?",
-      "type": "relações - simétrica",
+      "imgUrl": "./img-question/img-q21.svg",
+      "question": "Dada a relação representada como matriz acima, marque a alternativa correta:",
+      "type": ["relações - simétrica", "relações - reflexiva"],
       "options": [
-        "Sim, pois se A é irmão de B, então B é irmão de A",
-        "Não, pois depende da idade",
-        "Não, pois nem todos têm irmãos",
-        "Sim, mas apenas entre irmãos do mesmo sexo"
+        "Essa relação é simétrica e reflexiva",
+        "Essa relação é simétrica, mas não é reflexiva",
+        "Essa relação não é simétrica, mas é reflexiva",
+        "Essa relação não é simétrica e não é reflexiva"
       ],
-      "answers": ["Sim, pois se A é irmão de B, então B é irmão de A"],
-      "explanation": "A relação de irmandade é naturalmente simétrica: a relação é recíproca por definição.",
+      "answers": ["Essa relação é simétrica, mas não é reflexiva"],
+      "explanation": "É simétrica porque a matriz é espelhada na diagonal, mas não é reflexiva pois nem todos os elementos da diagonal principal são iguais a 1.",
       "difficulty": "dificil"
     },
     {
       "id": 22,
-      "imgUrl": "./img-question/img-q22.png",
+      "imgUrl": "",
       "question": "Uma relação R é transitiva quando:",
       "type": "relações - transitiva",
       "options": [
@@ -332,42 +328,42 @@
     },
     {
       "id": 23,
-      "imgUrl": "./img-question/img-q23.png",
-      "question": "Seja R = {(1,2), (2,3), (1,3), (2,2)} no conjunto {1, 2, 3}. R é transitiva?",
+      "imgUrl": "",
+      "question": "Seja R = {(a,b), (b,c), (a,c), (b,b), (c, c)} no conjunto {a, b, c}. R é transitiva?",
       "type": "relações - transitiva",
       "options": [
-        "Sim, todas as implicações necessárias estão presentes",
-        "Não, pois falta (1, 1)",
-        "Não, pois falta (3, 1)",
-        "Não, pois não é simétrica"
+        "Não, pois falta (a, a)",
+        "Não, pois falta (c, a)",
+        "Não, pois não é simétrica",
+        "Sim, todas as implicações necessárias estão presentes"
       ],
       "answers": ["Sim, todas as implicações necessárias estão presentes"],
-      "explanation": "Verificando: (1,2) e (2,3) → (1,3) ✓; (1,2) e (2,2) → (1,2) ✓; (2,2) e (2,3) → (2,3) ✓.",
+      "explanation": "Verificando: (a,b) e (b,c) → (a,c) ✓; (a,b) e (b,b) → (a,b) ✓; (b,b) e (b,c) → (b,c) ✓.",
       "difficulty": "medio"
     },
     {
       "id": 24,
-      "imgUrl": "./img-question/img-q24.png",
-      "question": "A relação ≤ (menor ou igual) nos números reais é transitiva?",
-      "type": "relações - transitiva",
+      "imgUrl": "./img-question/img-q24.svg",
+      "question": "Analise a matriz de relação R representada acima. Quais propriedades essa relação possui?",
+      "type": ["relações - transitiva", "relações - simétrica", "relações - reflexiva"],
       "options": [
-        "Sim, pois se a ≤ b e b ≤ c, então a ≤ c",
-        "Não, pois não é simétrica",
-        "Não, pois nem sempre a ≤ b implica b ≤ c",
-        "Sim, mas apenas para números inteiros"
+        "Reflexiva: ✅ / Simétrica: ✅ / Transitiva: ❌",
+        "Reflexiva: ❌ / Simétrica: ✅ / Transitiva: ✅",
+        "Reflexiva: ✅ / Simétrica: ✅ / Transitiva: ✅",
+        "Reflexiva: ✅ / Simétrica: ❌ / Transitiva: ✅"
       ],
-      "answers": ["Sim, pois se a ≤ b e b ≤ c, então a ≤ c"],
-      "explanation": "A relação ≤ é transitiva: se um número é menor ou igual a outro, e este é menor ou igual a um terceiro, então o primeiro é menor ou igual ao terceiro.",
+      "answers": ["Reflexiva: ✅ / Simétrica: ❌ / Transitiva: ✅"],
+      "explanation": "Essa relação é reflexiva e transitiva, mas não é simétrica porque a matriz não é espelhada - por exemplo, R[1,2] = 1 mas R[2,1] = 0.",
       "difficulty": "dificil"
     },
     {
       "id": 25,
-      "imgUrl": "./img-question/img-q25.png",
-      "question": "Uma relação de equivalência deve ser:",
+      "imgUrl": "",
+      "question": "Marque a alternativa que diz quais propriedades especiais uma relação de equivalência deve ter:",
       "type": "relações - equivalência",
       "options": [
-        "Reflexiva, simétrica e transitiva",
         "Apenas reflexiva e simétrica",
+        "Reflexiva, simétrica e transitiva",
         "Apenas simétrica e transitiva",
         "Apenas reflexiva e transitiva"
       ],
@@ -377,7 +373,7 @@
     },
     {
       "id": 26,
-      "imgUrl": "./img-question/img-q26.png",
+      "imgUrl": "",
       "question": "Seja R = {(1,1), (2,2), (3,3), (1,2), (2,1)} no conjunto {1, 2, 3}. R é uma relação de equivalência?",
       "type": "relações - equivalência",
       "options": [
@@ -392,80 +388,7 @@
     },
     {
       "id": 27,
-      "imgUrl": "./img-question/img-q27.png",
-      "question": "A relação 'ter a mesma idade que' entre pessoas é uma relação de equivalência?",
-      "type": "relações - equivalência",
-      "options": [
-        "Sim, pois é reflexiva, simétrica e transitiva",
-        "Não, pois não é reflexiva",
-        "Não, pois não é simétrica",
-        "Não, pois não é transitiva"
-      ],
-      "answers": ["Sim, pois é reflexiva, simétrica e transitiva"],
-      "explanation": "É reflexiva (cada pessoa tem a mesma idade que ela mesma), simétrica (se A tem a mesma idade que B, B tem a mesma idade que A) e transitiva (se A tem a mesma idade que B e B que C, então A tem a mesma idade que C).",
-      "difficulty": "dificil"
-    },
-    {
-      "id": 28,
-      "imgUrl": "./img-question/img-q28.png",
-      "question": "Verdadeiro ou Falso: Um conjunto pode conter elementos repetidos.",
-      "type": "conjuntos - definição",
-      "options": [
-        "Verdadeiro",
-        "Falso"
-      ],
-      "answers": ["Falso"],
-      "explanation": "Em um conjunto, cada elemento aparece apenas uma vez. A repetição não altera o conjunto: {1, 2, 2, 3} = {1, 2, 3}.",
-      "difficulty": "facil"
-    },
-    {
-      "id": 29,
-      "imgUrl": "./img-question/img-q29.png",
-      "question": "Dados A = {a, b} e B = {c, d}, qual é A ∪ B?",
-      "type": "conjuntos - união",
-      "options": [
-        "{a, b, c, d}",
-        "{a, b}",
-        "{c, d}",
-        "{}"
-      ],
-      "answers": ["{a, b, c, d}"],
-      "explanation": "A união contém todos os elementos de ambos os conjuntos.",
-      "difficulty": "facil"
-    },
-    {
-      "id": 30,
-      "imgUrl": "./img-question/img-q30.png",
-      "question": "Se A = {1, 2, 3, 4, 5} e B = {4, 5, 6, 7}, qual é A ∩ B?",
-      "type": "conjuntos - interseção",
-      "options": [
-        "{4, 5}",
-        "{1, 2, 3, 6, 7}",
-        "{1, 2, 3, 4, 5, 6, 7}",
-        "{}"
-      ],
-      "answers": ["{4, 5}"],
-      "explanation": "A interseção contém apenas os elementos comuns a ambos os conjuntos.",
-      "difficulty": "facil"
-    },
-    {
-      "id": 31,
-      "imgUrl": "./img-question/img-q31.png",
-      "question": "Dado U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} e A = {0, 2, 4, 6, 8}, qual é A'?",
-      "type": "conjuntos - complemento",
-      "options": [
-        "{1, 3, 5, 7, 9}",
-        "{0, 2, 4, 6, 8}",
-        "{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}",
-        "{}"
-      ],
-      "answers": ["{1, 3, 5, 7, 9}"],
-      "explanation": "O complemento contém os elementos do universo que não pertencem a A (os números ímpares).",
-      "difficulty": "facil"
-    },
-    {
-      "id": 32,
-      "imgUrl": "./img-question/img-q32.png",
+      "imgUrl": "",
       "question": "Verdadeiro ou Falso: O conjunto vazio é subconjunto de qualquer conjunto.",
       "type": "conjuntos - subconjuntos",
       "options": [
@@ -477,68 +400,8 @@
       "difficulty": "facil"
     },
     {
-      "id": 33,
-      "imgUrl": "./img-question/img-q33.png",
-      "question": "Qual relação no conjunto {1, 2, 3} é reflexiva?",
-      "type": "relações - reflexiva",
-      "options": [
-        "R = {(1,1), (2,2), (3,3)}",
-        "R = {(1,2), (2,3)}",
-        "R = {(1,1), (2,2)}",
-        "R = {(1,2), (2,1), (3,3)}"
-      ],
-      "answers": ["R = {(1,1), (2,2), (3,3)}"],
-      "explanation": "Para ser reflexiva, deve conter (a,a) para todos os elementos do conjunto.",
-      "difficulty": "facil"
-    },
-    {
-      "id": 34,
-      "imgUrl": "./img-question/img-q34.png",
-      "question": "Seja R = {(1,2), (2,1), (3,4), (4,3), (5,5)} no conjunto {1, 2, 3, 4, 5}. R é simétrica?",
-      "type": "relações - simétrica",
-      "options": [
-        "Sim, para todo (a,b) em R, (b,a) também está",
-        "Não, pois falta (1,1)",
-        "Não, pois falta (2,2)",
-        "Não, pois (5,5) quebra a simetria"
-      ],
-      "answers": ["Sim, para todo (a,b) em R, (b,a) também está"],
-      "explanation": "Verificando todos os pares: (1,2)↔(2,1) ✓, (3,4)↔(4,3) ✓, (5,5) é simétrico consigo ✓.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 35,
-      "imgUrl": "./img-question/img-q35.png",
-      "question": "Seja R = {(1,1), (1,2), (2,2), (2,3), (1,3), (3,3)} no conjunto {1, 2, 3}. R é transitiva?",
-      "type": "relações - transitiva",
-      "options": [
-        "Sim, todas as implicações transitivas estão satisfeitas",
-        "Não, pois falta (3,1)",
-        "Não, pois falta (2,1)",
-        "Não, pois não é simétrica"
-      ],
-      "answers": ["Sim, todas as implicações transitivas estão satisfeitas"],
-      "explanation": "Verificando: (1,2) e (2,3) → (1,3) ✓; (1,2) e (2,2) → (1,2) ✓; todas as outras também verificam.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 36,
-      "imgUrl": "./img-question/img-q36.png",
-      "question": "Quantas classes de equivalência tem a relação R = {(1,1), (2,2), (3,3), (1,2), (2,1)} no conjunto {1, 2, 3}?",
-      "type": "relações - equivalência",
-      "options": [
-        "2",
-        "1",
-        "3",
-        "4"
-      ],
-      "answers": ["2"],
-      "explanation": "As classes de equivalência são: {1, 2} e {3}. Total: 2 classes.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 37,
-      "imgUrl": "./img-question/img-q37.png",
+      "id": 28,
+      "imgUrl": "",
       "question": "Dados A = {1, 2, 3}, B = {2, 3, 4} e C = {3, 4, 5}, calcule (A ∩ B) ∪ C:",
       "type": ["conjuntos - interseção", "conjuntos - união"],
       "options": [
@@ -550,51 +413,6 @@
       "answers": ["{2, 3, 4, 5}"],
       "explanation": "Primeiro: A ∩ B = {2, 3}. Depois: {2, 3} ∪ C = {2, 3} ∪ {3, 4, 5} = {2, 3, 4, 5}.",
       "difficulty": "medio"
-    },
-    {
-      "id": 38,
-      "imgUrl": "./img-question/img-q38.png",
-      "question": "Dado U = {1, 2, 3, 4, 5, 6}, A = {1, 2, 3} e B = {3, 4, 5}, calcule (A' ∩ B'):",
-      "type": ["conjuntos - complemento", "conjuntos - interseção"],
-      "options": [
-        "{6}",
-        "{1, 2}",
-        "{4, 5}",
-        "{3}"
-      ],
-      "answers": ["{6}"],
-      "explanation": "A' = {4, 5, 6}, B' = {1, 2, 6}. Logo A' ∩ B' = {6}.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 39,
-      "imgUrl": "./img-question/img-q39.png",
-      "question": "Se A ⊆ B, então A ∩ B é igual a:",
-      "type": ["conjuntos - subconjuntos", "conjuntos - interseção"],
-      "options": [
-        "A",
-        "B",
-        "∅",
-        "A ∪ B"
-      ],
-      "answers": ["A"],
-      "explanation": "Se A está contido em B, então todos os elementos de A também estão em B, logo A ∩ B = A.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 40,
-      "imgUrl": "./img-question/img-q40.png",
-      "question": "A relação R = {(a,b) | a ≤ b} nos números naturais é reflexiva, simétrica ou transitiva?",
-      "type": ["relações - reflexiva", "relações - simétrica", "relações - transitiva"],
-      "options": [
-        "Reflexiva e transitiva, mas não simétrica",
-        "Apenas reflexiva",
-        "Reflexiva e simétrica, mas não transitiva",
-        "Reflexiva, simétrica e transitiva"
-      ],
-      "answers": ["Reflexiva e transitiva, mas não simétrica"],
-      "explanation": "É reflexiva (a ≤ a), transitiva (se a ≤ b e b ≤ c, então a ≤ c), mas não simétrica (se a ≤ b, não necessariamente b ≤ a).",
-      "difficulty": "dificil"
     }
   ]
 }
