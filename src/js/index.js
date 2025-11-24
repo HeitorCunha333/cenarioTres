@@ -55,6 +55,17 @@ function renderOptions(options, questionNumber, isCheckBox) {
     "[data-js='question-container']"
   )
 
+  const pointFinal = document.querySelector(
+    "[data-js='point-final']"
+  )
+  const pointTotal = document.querySelector(
+    "[data-js='point-total']"
+  )
+  if(pointFinal && pointTotal){
+    pointFinal.textContent = localStorage.getItem("points")
+    pointTotal.textContent = localStorage.getItem("total") 
+  }
+
   if (!questionContainer) {
     return
   }
@@ -62,6 +73,8 @@ function renderOptions(options, questionNumber, isCheckBox) {
   const databaseRep = new Database("/data/database.json")
   const data = await databaseRep.fetchData()
   const questions = await data.getQuestions()
+
+  localStorage.setItem("total", questions.length)
 
   questions.forEach((it) => {
     const questBox = document.createElement("div")
