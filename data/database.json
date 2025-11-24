@@ -253,7 +253,7 @@
     },
     {
       "id": 18,
-      "imgUrl": "./img-question/img-q18.png",
+      "imgUrl": "/data/img-question/img-q18.png",
       "question": "Dada a relação representada como matriz acima, ela é considerada reflexiva?",
       "type": "relações - reflexiva",
       "options": [
@@ -298,7 +298,7 @@
     },
     {
       "id": 21,
-      "imgUrl": "./img-question/img-q21.png",
+      "imgUrl": "/data/img-question/img-q21.png",
       "question": "Dada a relação representada como matriz acima, marque a alternativa correta:",
       "type": ["relações - simétrica", "relações - reflexiva"],
       "options": [
@@ -343,7 +343,7 @@
     },
     {
       "id": 24,
-      "imgUrl": "./img-question/img-q24.png",
+      "imgUrl": "/data/img-question/img-q24.png",
       "question": "Analise a matriz de relação R representada acima. Quais propriedades essa relação possui?",
       "type": ["relações - transitiva", "relações - simétrica", "relações - reflexiva"],
       "options": [
