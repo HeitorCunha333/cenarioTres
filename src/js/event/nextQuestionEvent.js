@@ -1,6 +1,7 @@
 import { currentPageEvent } from "./currentPageEvent.js"
 
 /**
+ 
  * Verifica se todas as questões foram respondidas
  * @param {NodeList} questBoxList - Lista de todas as questões
  * @returns {boolean} - true se todas foram respondidas, false caso contrário
@@ -26,10 +27,12 @@ function checkAllQuestionsAnswered(questBoxList) {
  */
 function navigateToResultsScreen() {
   // TODO: Adicione aqui o código para mudar para a tela de resultados
-  console.log("🎉 Redirecionando para tela de resultados...")
+  const viewHits = document.querySelector("[data-js='view-hits']")
 
+  localStorage.setItem("points", viewHits.textContent)
+  console.log("🎉 Redirecionando para tela de resultados...")
   // Exemplo de possíveis implementações:
-  // window.location.href = '/results.html'
+  window.location.href = '/src/pages/final.html'
   // ou
   // showResultsScreen()
   // ou
