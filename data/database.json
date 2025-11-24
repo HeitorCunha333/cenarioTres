@@ -61,16 +61,16 @@
     {
       "id": 5,
       "imgUrl": "",
-      "question": "Se A = {x | x é par e 0 < x < 10} e B = {x | x é múltiplo de 3 e 0 < x < 10}, quantos elementos tem A ∪ B?",
+      "question": "Se A = {x | 6 < x ≤ 12} e B = B = {1, 3, 5, 7}, quantos elementos tem A ∪ B?",
       "type": "conjuntos - união",
       "options": [
         "7",
         "6",
-        "8",
+        "9",
         "5"
       ],
-      "answers": ["7"],
-      "explanation": "A = {2, 4, 6, 8}, B = {3, 6, 9}. A ∪ B = {2, 3, 4, 6, 8, 9}, que tem 7 elementos.",
+      "answers": ["9"],
+      "explanation": "A = {7, 8, 9, 10, 11, 12}, B = {1, 3, 5, 7}. A ∪ B = {1, 3, 5, 7, 8, 9, 10, 11, 12}, que tem 9 elementos.",
       "difficulty": "medio"
     },
     {
@@ -106,14 +106,16 @@
     {
       "id": 8,
       "imgUrl": "",
-      "question": "(A ∪ B) = A + B + (A ∩ B). Julgue essa setença:",
+      "question": "Dados A = {1, 2, 3}, B = {2, 3, 4} e C = {3, 4, 5}, calcule (A ∩ B) ∪ C:",
       "type": ["conjuntos - interseção", "conjuntos - união"],
       "options": [
-        "Verdadeiro",
-        "Falso"
+        "{2, 3, 4, 5}",
+        "{3}",
+        "{1, 2, 3, 4, 5}",
+        "{2, 3}"
       ],
-      "answers": ["Falso"],
-      "explanation": "A união equivale a diferença da soma dos conjuntos desta união e da interseção dos mesmos. (A ∪ B) = A + B - (A ∩ B).",
+      "answers": ["{2, 3, 4, 5}"],
+      "explanation": "Primeiro: A ∩ B = {2, 3}. Depois: {2, 3} ∪ C = {2, 3} ∪ {3, 4, 5} = {2, 3, 4, 5}.",
       "difficulty": "medio"
     },
     {
@@ -164,17 +166,15 @@
     {
       "id": 12,
       "imgUrl": "",
-      "question": "Qual das Leis de De Morgan está CORRETA?",
-      "type": "conjuntos - complemento",
+      "question": "Verdadeiro ou Falso: O conjunto vazio é subconjunto de qualquer conjunto.",
+      "type": "conjuntos - subconjuntos",
       "options": [
-        "(A ∪ B)' = A' ∩ B'",
-        "(A ∪ B)' = A' ∪ B'",
-        "(A ∩ B)' = A' ∩ B'",
-        "A' ∪ B' = (A' ∩ B')'"
+        "Verdadeiro",
+        "Falso"
       ],
-      "answers": ["(A ∪ B)' = A' ∩ B'"],
-      "explanation": "As Leis de De Morgan estabelecem que: (A ∪ B)' = A' ∩ B' e (A ∩ B)' = A' ∪ B'.",
-      "difficulty": "dificil"
+      "answers": ["Verdadeiro"],
+      "explanation": "Por convenção e definição lógica, ∅ ⊆ A para qualquer conjunto A.",
+      "difficulty": "facil"
     },
     {
       "id": 13,
@@ -362,10 +362,10 @@
       "question": "Marque a alternativa que diz quais propriedades especiais uma relação de equivalência deve ter:",
       "type": "relações - equivalência",
       "options": [
-        "Apenas reflexiva e simétrica",
+        "Reflexiva e simétrica",
         "Reflexiva, simétrica e transitiva",
-        "Apenas simétrica e transitiva",
-        "Apenas reflexiva e transitiva"
+        "Simétrica e transitiva",
+        "Reflexiva e transitiva"
       ],
       "answers": ["Reflexiva, simétrica e transitiva"],
       "explanation": "Para ser uma relação de equivalência, é necessário satisfazer as três propriedades simultaneamente.",
@@ -384,34 +384,6 @@
       ],
       "answers": ["Sim, é reflexiva, simétrica e transitiva"],
       "explanation": "R é reflexiva (contém todos (a,a)), simétrica ((1,2) e (2,1) estão presentes) e transitiva (todas implicações válidas). Logo, é de equivalência.",
-      "difficulty": "medio"
-    },
-    {
-      "id": 27,
-      "imgUrl": "",
-      "question": "Verdadeiro ou Falso: O conjunto vazio é subconjunto de qualquer conjunto.",
-      "type": "conjuntos - subconjuntos",
-      "options": [
-        "Verdadeiro",
-        "Falso"
-      ],
-      "answers": ["Verdadeiro"],
-      "explanation": "Por convenção e definição lógica, ∅ ⊆ A para qualquer conjunto A.",
-      "difficulty": "facil"
-    },
-    {
-      "id": 28,
-      "imgUrl": "",
-      "question": "Dados A = {1, 2, 3}, B = {2, 3, 4} e C = {3, 4, 5}, calcule (A ∩ B) ∪ C:",
-      "type": ["conjuntos - interseção", "conjuntos - união"],
-      "options": [
-        "{2, 3, 4, 5}",
-        "{3}",
-        "{1, 2, 3, 4, 5}",
-        "{2, 3}"
-      ],
-      "answers": ["{2, 3, 4, 5}"],
-      "explanation": "Primeiro: A ∩ B = {2, 3}. Depois: {2, 3} ∪ C = {2, 3} ∪ {3, 4, 5} = {2, 3, 4, 5}.",
       "difficulty": "medio"
     }
   ]
